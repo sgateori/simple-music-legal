@@ -9,20 +9,16 @@
 <body>
 
 <h1>Simple Music Privacy Policy</h1>
-<p class="meta"><strong>App:</strong> Simple Music (<code>com.simplemusic</code>) &middot; <strong>Developer:</strong> [DEVELOPER NAME] &middot; <strong>Last updated:</strong> 2026-10-22</p>
+<p class="meta"><strong>App:</strong> Simple Music (<code>com.simplemusic</code>) &middot; <strong>Developer:</strong> sgateori &middot; <strong>Last updated:</strong> 2026-10-22</p>
 
 <p>Simple Music is an offline music player for the audio files on your phone and microSD card. It has no accounts, shows no ads and has no server of ours. Playback and your library never use the network.</p>
 
 <h2>What stays on your device</h2>
 <p>The app reads your audio through Android's media library (title, artist, album, duration, file name, path and album ID) on internal storage and the microSD card, embedded cover art, <code>.lrc</code> lyric files next to tracks, and <code>.m3u</code> playlists. It can also read a folder you pick with the system picker. If you switch on the optional folder artwork setting, it also looks for cover images such as <code>cover.jpg</code>, which needs the photos permission, asked only when you turn that setting on. All of this stays on your phone. None of it is sent to the developer, Google or anyone else. Playlists and settings are stored locally.</p>
 <p>The app allows Android's own app backup, so your settings and local playlists can be included in your own Android or Google backup. That is your device backup, not something the developer receives.</p>
-<!-- OPEN: Android backup (sheet open point 7): allowBackup=true with no exclusion rules; stance "user's own device backup, not declared as collection" is unconfirmed. Owner may add exclusion rules in a later build; update this paragraph if so. -->
-
 <h2>Crash reports and usage statistics (Firebase)</h2>
 <p>The only network use is Google Firebase Crashlytics and Firebase Analytics. Firebase acts as our service provider and processes this data on our behalf; we do not sell it or use it for advertising.</p>
-<!-- OPEN: "Shared" in the Data safety form: sheet proposes Shared = No (Firebase as service provider); conservative alternative is Shared = Yes (analytics). Owner to choose; wording above must match. -->
 <p><strong>This is on by default and the app does not ask first.</strong> There is one switch, <em>Share crash reports and usage statistics</em>, in Settings. Collection starts when you first open the app, before you can see the switch, and you can turn it off at any time; it covers both services. It is never active in debug builds. The library screen's permission hint also tells you crash reports are sent and can be switched off. We do not claim that your consent is requested.</p>
-<!-- OPEN: Default ON with no first-run prompt (opt-out). Sheet open point 1: owner may change the app to default-off / first-run prompt, or answer "required" in the form. Keep this paragraph in step with that decision. -->
 <table>
 <tr><th>Data</th><th>Purpose</th></tr>
 <tr><td>Crash reports and handled errors (library scan, playlist and lyric reading, cover art, playback): a stack trace, the name of the step that failed and the error class, the screen name (library, playlists, now playing, equalizer, settings) and that a scan was started</td><td>Fix bugs</td></tr>
@@ -32,9 +28,7 @@
 </table>
 <p>The app does not deliberately send track titles, artists, albums, file names or paths, playlist names, lyrics or album art.</p>
 <p><strong>Limit:</strong> if the app crashes with an unexpected error, the error text produced by Android or a library is sent as it is. The app does not filter it, and in rare cases such text could include a file name or path.</p>
-<!-- OPEN: Uncaught crash text is not redacted; no Redact class (sheet open point 2). Keep "does not deliberately send" wording until the app redacts. -->
 <p>Google also derives an approximate country or region from your IP address when Analytics data arrives. The app never reads your location and has no location permission.</p>
-<!-- OPEN: Approximate location via Analytics IP (sheet open point 4): currently not declared in the Data safety form; align form and this sentence if Firebase's Play disclosure guidance lists it. -->
 <p>Data is encrypted in transit. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
 <h2>What we do not collect</h2>
@@ -42,12 +36,8 @@
 
 <h2>Permissions</h2>
 <p>Audio access (find and play your local music; Android 13+ audio permission, or storage read permission on Android 12 and older); photos access, only if you turn on folder artwork; internet and network state (Firebase only); notifications (the playback notification; playback works if you decline); foreground service for media playback and wake lock (keep playing with the screen off). No all-files, location, contacts, camera or microphone access. Other apps and devices on the same phone, such as headsets and Android Auto, can see the list of your local tracks through the media session so they can control playback.</p>
-<!-- OPEN: READ_MEDIA_IMAGES is declared for the optional folder-artwork setting; sheet says owner must decide whether to keep it because Play restricts it (permissions section). If dropped, remove the photos sentences above. -->
-
 <h2>Your choices and deletion</h2>
 <p>Turn the Settings switch off at any time. Uninstalling removes local data. Data in Firebase is tied to a random installation ID, not to your identity, so we can only locate it if you send us that ID. To ask us to delete data tied to your installation, email us the ID and we will delete what we can match.</p>
-<!-- OPEN: Deletion request offered "by email" is the sheet's proposal (Data safety: "Proposed: Yes"), not yet confirmed by the owner (sheet open point 8). Policy and form must say the same. -->
-
 <h2>Children</h2>
 <p>Simple Music is not directed at children.</p>
 
